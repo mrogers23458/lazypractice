@@ -12,10 +12,18 @@ function parseUrl(url) {
   const videoUrlName = urlArray[1];
   const videoPathname = `./assets/videos/video_${videoUrlName}.mp4`;
 
-  videoEl.pause();
-  videoSourceEl.removeAttribute("src");
-  videoSourceEl.setAttribute("src", videoPathname);
-  videoEl.load();
+  if (!videoUrlName) {
+    const pathName = `./assets/videos/video_beach.mp4`;
+    videoEl.pause();
+    videoSourceEl.removeAttribute("src");
+    videoSourceEl.setAttribute("src", pathName);
+    videoEl.load();
+  } else {
+    videoEl.pause();
+    videoSourceEl.removeAttribute("src");
+    videoSourceEl.setAttribute("src", videoPathname);
+    videoEl.load();
+  }
 }
 
 function handleChange(e) {
