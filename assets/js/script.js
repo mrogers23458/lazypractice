@@ -12,11 +12,13 @@ function parseUrl(url) {
   const videoUrlName = urlArray[1];
   const videoPathName = `./assets/videos/video_${videoUrlName}.mp4`;
 
-  if (videoUrlName) {
+  if (videoUrlName.length > 1) {
     videoEl.pause();
     videoSourceEl.removeAttribute("src");
     videoSourceEl.setAttribute("src", videoPathName);
     videoEl.load();
+  } else {
+    return;
   }
 }
 
