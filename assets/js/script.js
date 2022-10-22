@@ -11,12 +11,11 @@ function parseUrl(url) {
   const urlArray = url.split("#");
   const videoUrlName = urlArray[1];
   const videoPathname = `./assets/videos/video_${videoUrlName}.mp4`;
-  if (videoUrlName == "forest") {
-    videoEl.pause();
-    videoSourceEl.removeAttribute("src");
-    videoSourceEl.setAttribute("src", videoPathname);
-    videoEl.load();
-  }
+
+  videoEl.pause();
+  videoSourceEl.removeAttribute("src");
+  videoSourceEl.setAttribute("src", videoPathname);
+  videoEl.load();
 }
 
 function handleChange(e) {
