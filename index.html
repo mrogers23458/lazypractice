@@ -4,17 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/script.js" defer></script>
     <title>Lazy Practice</title>
 </head>
 <body>
-    <h1>Cat Image</h1>
-    <img class="lazy" data-src="catimage.jpg" src="placeholdCat.png" />
-    <button id="clickme">Click</button>
-    <button id="renderHello">Render Hello</button>
-    <noscript>
-        <img class="lazy" data-src="catimage.jpg" src="catimage.jpg" />
-    </noscript>
-    <a href="hello.html">go to hello</a>
+    <div class="container main--container">
+        <h1>My Carousel</h1>
+        <div class="carousel">
+                <video id="video" controls width="500">
+                    <source id="source" href="#beach" src="./assets/videos/video_beach.mp4"
+                            type="video/mp4">
+                </video>
+            <div>
+                <img class="thumbnail thumbnail--beach" data-name="beach" data-src="./assets/videos/video_beach.mp4" src="./assets/images/image_beach.avif">
+                <img class="thumbnail thumbnail--countryside" data-name="countryside" data-src="./assets/videos/video_countryside.mp4" src="./assets/images/image_countryside.avif">
+                <img class="thumbnail thumbnail--forest" data-name="forest" data-src="./assets/videos/video_forest.mp4" src="./assets/images/image_forest.avif">
+            </div>
+        </div>
+    </div>
 </body>
 </html>

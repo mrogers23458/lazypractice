@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+}
+
+.main--container {
+    flex-direction: column;
+    width: 90vw;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.thumbnail {
+    height: 4rem;
+    width: 5rem;
+}
