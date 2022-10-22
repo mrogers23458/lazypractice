@@ -16,10 +16,12 @@
 
 .thumbnail {
     height: 4rem;
-    width: 5rem;
+    width: 7rem;
+    margin-right: 0.75rem;
 }
 
 .thumbnail--container {
     width: 70vw;
-    justify-content: space-between;
+    flex-wrap: nowrap;
+    overflow: hidden;
 }
