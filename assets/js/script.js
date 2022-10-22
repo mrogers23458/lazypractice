@@ -1,6 +1,6 @@
 const thumbnailEls = document.querySelectorAll(".thumbnail");
 const carouselEl = document.querySelector(".caousel");
-const videoEl = document.getElementById("video");
+const videoEl = document.querySelector("video");
 const videoSourceEl = document.getElementById("source");
 
 thumbnailEls.forEach((thumbnailEl) =>

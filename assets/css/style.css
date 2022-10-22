@@ -10,7 +10,16 @@
     align-items: center;
 }
 
+.video {
+    width: 70vw;
+}
+
 .thumbnail {
     height: 4rem;
     width: 5rem;
+}
+
+.thumbnail--container {
+    width: 70vw;
+    justify-content: space-between;
 }
