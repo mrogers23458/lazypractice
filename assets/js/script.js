@@ -10,18 +10,12 @@ thumbnailEls.forEach((thumbnailEl) =>
 function parseUrl(url) {
   const urlArray = url.split("#");
   const videoUrlName = urlArray[1];
-  const videoPathname = `./assets/videos/video_${videoUrlName}.mp4`;
+  const videoPathName = `./assets/videos/video_${videoUrlName}.mp4`;
 
-  if (!videoUrlName) {
-    const pathName = `./assets/videos/video_beach.mp4`;
+  if (videoUrlName) {
     videoEl.pause();
     videoSourceEl.removeAttribute("src");
-    videoSourceEl.setAttribute("src", pathName);
-    videoEl.load();
-  } else {
-    videoEl.pause();
-    videoSourceEl.removeAttribute("src");
-    videoSourceEl.setAttribute("src", videoPathname);
+    videoSourceEl.setAttribute("src", videoPathName);
     videoEl.load();
   }
 }
