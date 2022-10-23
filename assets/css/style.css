@@ -33,14 +33,16 @@
 
 .main--container {
     flex-direction: column;
-    width: 90vw;
-    height: 90vh;
+    width: 99vw;
     justify-content: center;
     align-items: center;
 }
 
 .video {
     width: 70vw;
+}
+.selected {
+    border: 2px solid yellow;
 }
 
 .thumbnail {

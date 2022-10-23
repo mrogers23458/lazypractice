@@ -28,10 +28,14 @@ function handleSlideBack(e) {
   console.log(`new X = ${carouselStateObj.newX}`);
 }
 function handleSlideForward(e) {
-  console.log(`${e.target.dataset.x} clicked`);
-  console.log(`previous X was ${carouselStateObj.previousX}`);
+  const previousEl = thumbnailEls[carouselStateObj.previousX];
+  previousEl.setAttribute("style", "border: none");
+
   carouselStateObj.newX = carouselStateObj.previousX + 1;
   carouselStateObj.previousX += 1;
+  const currentEl = thumbnailEls[carouselStateObj.newX];
+  currentEl.setAttribute("style", "border: 2px solid yellow");
+  console.log("currentEl", currentEl);
   console.log(`new X = ${carouselStateObj.newX}`);
 }
 
